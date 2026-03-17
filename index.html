@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&family=Reem+Kufi:wght@400..700&family=Reggae+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Splitter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="icon" href="Images/logo-1.png" type="image/x-icon">
+    <title>Ajay Thakur </title>
+</head>
+<body>
+    <style>
+        /* =========================
+   GLOBAL STYLES
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a, p {
+    font-family: "Outfit", sans-serif;
+    font-size: 22px;
+    color: #383838;
+    font-weight: normal;
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+/* Font fallbacks */
+.demo {
+    font-family: "Reem Kufi", "Outfit", "Fraunces", "Reggae One", "Carattere", system-ui, sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #fff;
+    padding: 16px 0;
+}
+
+.inner_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.inner_header .logo img {
+    width: 100px;
+    max-width: 100%;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.navigation ul li a:hover {
+    color: #c46b2a;
+}
+
+.nav_btn a {
+    background: #75bc43;
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+/* =========================
+   BANNER
+========================= */
+.banner {
+    background: #75bc4369;
+    padding: 100px 0;
+}
+
+.banner_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 110px;
+}
+
+.banner_text {
+    width: calc(100% - 420px);
+}
+
+.banner_text #typing-heading,
+h1 {
+    font-size: 70px;
+    font-family: "Fraunces", serif;
+    color: #283618;
+    margin: 20px 0 30px;
+}
+
+.banner img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 14px 0 #16161657;
+}
+
+.banner .image_part {
+    width: 420px !important;
+}
+
+.signature {
+    font-family: "Carattere", cursive;
+    font-size: 40px;
+    color: #283618;
+    border-bottom: 2px solid #283618;
+    padding-bottom: 5px;
+    display: inline-block;
+    width: auto;
+    margin-top: 60px;
+    transform: rotate(-10deg);
+}
+
+/* =========================
+   ABOUT ME
+========================= */
+.about_me {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.about_me_inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 90px;
+}
+
+.about_me .image_part {
+    width: 465px;
+}
+
+.about_me img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    border: 4px solid #75bc43;
+    object-fit: cover;
+}
+
+.about_me .text_section {
+    width: calc(100% - 466px);
+}
+
+.about_me .text_section h2 {
+    margin: 10px 0 30px;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+.education_inner {
+    display: flex;
+    gap: 60px;
+    padding: 60px 40px;
+    border-radius: 10px;
+    background-image: url(Images/bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.education_inner:before {
+    content: "";
+    background-color: #000000bd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.education_inner h2,
+.education_inner p {
+    position: relative;
+    color: #fff;
+}
+
+/* =========================
+   SKILLS
+========================= */
+.skill {
+    padding: 100px 0;
+}
+
+.skill_header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.skill_header h2 {
+    margin: 10px 0 20px;
+}
+
+.skill_body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.skill_box {
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #E7E9E1;
+}
+
+.skill_box:nth-child(even) {
+    background-color: #75bc4369;
+}
+
+.skill_box ul li {
+    list-style: none;
+    padding: 10px 0 0 30px;
+    position: relative;
+}
+
+.skill_box ul li:before {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: #75bc43;
+    display: inline-block;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+.experience {
+    padding: 100px 0;
+    background-color: #F9F9F9;
+}
+
+.experience_header {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.experience_header h2 {
+    margin-top: 16px;
+}
+
+.number_box {
+    background-color: #75bc4369;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.number_box span {
+    font-family: "Reggae One", system-ui;
+    font-size: 40px;
+}
+
+.experience_body {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience_body .row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 200px;
+    padding-bottom: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.experience_body h2 {
+    font-size: 32px;
+    margin: 15px 0 10px;
+}
+
+.experience_body h3 {
+    font-size: 24px;
+}
+
+.experience_body .row:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #75bc43;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.experience_body .row:after {
+    content: "";
+    width: 4px;
+    height: 80%;
+    background-color: #75bc43;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35px;
+}
+
+/* =========================
+   GET IN TOUCH
+========================= */
+.get_in_touch {
+    padding: 100px 0;
+}
+
+.get_in_touch_body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 60px;
+}
+
+.get_in_touch_box {
+    background-color: #75bc4369;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.get_in_touch_box .icon_box {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.get_in_touch_box .icon_box i {
+    font-size: 34px;
+    color: #75bc43;
+}
+
+.get_in_touch_box h4 {
+    font-size: 28px;
+    margin: 20px 0 10px;
+}
+
+.get_in_touch_box a {
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.get_in_touch_box a:hover {
+    color: #c06b32;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: #75bc4369;
+    padding: 80px 0;
+}
+
+.footer_inner {
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.footer_inner img {
+    width: 160px;
+}
+
+.footer_inner p {
+    margin: 30px 0;
+}
+
+.social_icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social_icons li {
+    list-style: none;
+}
+
+.social_icons li a {
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 26px;
+    text-decoration: none;
+}
+    </style>
+
+    <header id="header">
+        <div class="container">
+            <div class="inner_header">
+                <div class="logo">
+                   <a href="/"> <img src="Images/logo-1.png" alt="Logo" style="width:70px;"></a>
+                </div>
+                <div class="navigation">
+                    <ul>
+                        <li> <a href="#about_me">About us</a></li>
+                        <li> <a href="#education">Education </a></li>
+                        <li> <a href="#experience">Experience </a></li>
+                        <li> <a href="#skill">Skill </a></li>
+                        <li class="nav_btn"> <a href="#Contact">Contact Us </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="banner">
+        <div class="container">
+            <div class="banner_inner">
+                <div class="image_part" >
+                    <img src="Images/gurjantsinghugla.png" alt="Banner Image">
+                </div>
+                <div class="banner_text">
+                    <h3>Welcome</h3>
+                    <h1 id="typing-heading">Discover My Work, Skills, and Achievements</h1>
+                    <p> I create stunning, user-focused websites and digital experiences that help businesses grow. Specializing in design, Shopify, WordPress, and modern web platforms.</p>
+
+                    <h4 class="signature">Ajay Thakur</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="about_me" id="about_me">
+        <div class="container">
+            <div class="about_me_inner">
+
+                <div class="text_section" data-aos="fade-up" >
+                    <h3>About Me</h3>
+                    <h2>Designing Digital Excellence</h2>
+                    <p>I'm a passionate web designer with expertise in creating beautiful, functional digital experiences. My approach combines user-centered design principles with modern technology to deliver results that matter.
+                    <br>
+                    <br>
+                    Whether it's a custom WordPress site, a Shopify store, or a Wix website, I bring the same level of care and attention to detail to every project. I love solving design challenges and helping businesses stand out online.</p>
+                </div>
+
+                <div id="example-anchor" style="height: 500px; background-color: #f0f0f0;"></div>
+
+
+                <div class="image_part" data-aos="fade-left"
+                    data-aos-anchor="#example-anchor"
+                    data-aos-offset="500"
+                    data-aos-duration="500">
+                    <img src="Images/pcimage.jpg" alt="Banner Image" />
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+
+   <!--  <section class="education" data-aos="fade-up" id="education">
+        <div class="container">
+            <div class="education_inner">
+                <h2>Education</h2>
+                <p>Completed 10th and 12th Standard.<br>
+                    Studied Bachelor of Science (B.Sc.) in Computer Science, gaining knowledge in programming and computer fundamentals.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="skill" id="skill">
+        <div class="container">
+            <div class="skill_inner">
+                <div class="skill_header" data-aos="fade-up">
+                    <h3>Expertise</h3>
+                    <h2>Skills & Tools</h2>
+                    <p>Proficient in modern design tools and platforms to create exceptional digital experiences.</p>
+                </div>
+                <div class="skill_body">
+                    <div class="skill_box" data-aos="fade-up-right">
+                        <h5>Design Fundamentals</h5>
+                        <ul>
+                            <li><p> HTML & CSS</p></li>
+                            <li><p> JavaScript & jQuery</p></li>
+                            <li><p> Photoshop</p></li>
+                            <li><p> Figma</p></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="skill_box" data-aos="flip-up">
+                        <h5>WordPress Builders</h5>
+                        <ul>
+                            <li><p> Elementor</p></li>
+                            <li><p> Divi & Avada</p></li>
+                            <li><p> Bricks Builder</p></li>
+                            <li><p> Gutenberg & WP Bakery</p></li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="skill_box" data-aos="fade-up-left">
+                        <h5>E-Commerce & Platforms</h5>
+                        <ul>
+                            <li><p> Shopify & HTML</p></li>
+                            <li><p> Wix</p></li>
+                            <li><p> Webflow</p></li>
+                            <li><p> Replo & Shogun</p></li>
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="experience_inner">
+
+                <div class="experience_header" data-aos="fade-up" >
+                    <h3> Trusted Expertise </h3>
+                    <h2>Work Experience</h2>
+                </div>
+                <div class="experience_body">
+                    <div class="row">
+                        <div class="number_box" data-aos="fade-up-right" >
+                        <span>01</span>
+                        </div>
+                        <div class="detail_box" data-aos="fade-up-left">
+                            <h3>June 2017 - June 2019</h3>
+                            <h2>VenusApp Solutions</h2>
+                            <p>Role: Web Designer</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="detail_box" data-aos="fade-up-right" >
+                            <h3>Jan 2020 - Dec 2021</h3>
+                            <h2>Coder's Corner</h2>
+                            <p>Role: Web Designer</p>
+                        </div>
+                        <div class="number_box" data-aos="fade-up-left">
+                        <span>02</span>
+                        </div>
+                        
+                    </div>
+
+
+
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="get_in_touch" id="Contact">
+        <div class="container">
+            <div class="get_in_touch_inner">
+                <div class="get_in_touch_header" data-aos="fade-right">
+                    <h2>Let’s Get In Touch </h2>
+                </div>
+
+                <div class="get_in_touch_body">
+
+                    <div class="get_in_touch_box" data-aos="fade-up-right">
+                        <div class="icon_box">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h4>Email</h4>
+                        <a href="mailto:gurjantsinghugala@gmail.com" target="_blank">akay26341@gmail.com</a>
+                    </div>
+
+                    <div class="get_in_touch_box" data-aos="flip-up">
+                        <div class="icon_box">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h4>Phone</h4>
+                        <a href="tel:7018396456" target="_blank">7018396456</a>
+                    </div>
+
+
+                    <div class="get_in_touch_box"  data-aos="fade-up-left">
+                        <div class="icon_box">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <h4>Linkdin</h4>
+                        <a href="https://www.linkedin.com/in/gurjant-singh-03132215a" target="_blank">Ajay thakur</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="container">
+            <div class="footer_inner" data-aos="fade-up">
+                <img src="Images/logo-1.png" alt="Logo"  style="width:100px;">
+                <p>Thank you for visiting my portfolio. Feel free to connect with me for any inquiries or collaborations. Your support means a lot!</p>
+               <ul class="social_icons">
+                    <li> <a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li> <a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li> <a href=""><i class="fa-brands fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+<script>
+
+        function animateTyping() {
+            let text = document.getElementById("typing-heading");
+            let textContent = text.textContent;
+            text.innerHTML = '';  
+
+     
+            textContent.split('').forEach(char => {
+                let span = document.createElement("span");
+                span.classList.add("letter");
+                span.textContent = char;
+                text.appendChild(span);
+            });
+
+            
+            gsap.fromTo(".letter", 
+                {
+                    opacity: 0,
+                    x: -30  
+                },
+                {
+                    opacity: 1, 
+                    x: 0,        
+                    duration: 0.15,
+                    stagger: 0.1,
+                    onComplete: () => {
+                        
+                        setTimeout(animateTyping, 2000); 
+                    }
+                });
+        }
+        window.addEventListener('load', () => {
+            animateTyping(); 
+        });
+
+        // ==================
+
+
+
+  // Initialize AOS
+        AOS.init({
+            once: false, 
+            duration: 1000, 
+            easing: 'ease-out-cubic', 
+            offset: 100, 
+        });
+
+//  header
+ gsap.registerPlugin(ScrollTrigger);
+        ScrollTrigger.create({
+            trigger: "header", 
+            start: "top ",  
+             end: "bottom top", 
+            pin: false,        
+            onEnter: function() {
+                document.getElementById('header').classList.add('header_sticky');
+            },
+            onLeaveBack: function() {
+                document.getElementById('header').classList.remove('header_sticky');
+            },
+            markers: false 
+        });
+
+
+          document.querySelectorAll('.navigation ul li a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href').substring(1);  // Get target section's ID
+      const targetElement = document.getElementById(targetId);
+      
+      window.scrollTo({
+        top: targetElement.offsetTop - document.querySelector('header').offsetHeight,  // Adjust scroll offset
+        behavior: 'smooth'  // Smooth scroll
+      });
+    });
+  });
+
+    </script>
+
+</body>
+</html>
