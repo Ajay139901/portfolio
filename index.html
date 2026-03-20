@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajay Thakur </title>
     <link href="https://fonts.googleapis.com/css2?family=Carattere&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&family=Reem+Kufi:wght@400..700&family=Reggae+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/Splitter.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link rel="icon" href="Images/logo-1.png" type="image/x-icon">
-    <title>Ajay Thakur </title>
 </head>
 <body>
     <style>
-        /* =========================
+  /* =========================
    GLOBAL STYLES
 ========================= */
 * {
@@ -92,7 +92,7 @@ header {
 }
 
 .navigation ul li a:hover {
-    color: #c46b2a;
+    color: #75bc43;
 }
 
 .nav_btn a {
@@ -123,7 +123,7 @@ header {
 }
 
 .banner_text #typing-heading,
-h1 {
+.banner_text h1 {
     font-size: 70px;
     font-family: "Fraunces", serif;
     color: #283618;
@@ -149,7 +149,6 @@ h1 {
     border-bottom: 2px solid #283618;
     padding-bottom: 5px;
     display: inline-block;
-    width: auto;
     margin-top: 60px;
     transform: rotate(-10deg);
 }
@@ -158,13 +157,12 @@ h1 {
    ABOUT ME
 ========================= */
 .about_me {
-    padding: 100px 0;
-    background: #fff;
+    padding: 100px 0 100px;
+    background: #f9f9f9;
 }
 
 .about_me_inner {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
     gap: 90px;
 }
@@ -190,35 +188,89 @@ h1 {
 }
 
 /* =========================
-   EDUCATION
+   PORTFOLIO
 ========================= */
-.education_inner {
+.portfolio {
+    padding: 100px 0;
+    background: #f9f9f9;
+}
+
+.portfolio_header {
+    text-align: center;
+}
+
+.portfolio_header h2 {
+    margin: 10px 0 20px;
+}
+
+.portfolio_tabs {
     display: flex;
-    gap: 60px;
-    padding: 60px 40px;
-    border-radius: 10px;
-    background-image: url(Images/bg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
 }
 
-.education_inner:before {
-    content: "";
-    background-color: #000000bd;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.tab_btn {
+    padding: 10px 25px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 18px;
 }
 
-.education_inner h2,
-.education_inner p {
-    position: relative;
+.tab_btn.active {
+    background: #75bc43;
     color: #fff;
+}
+
+.tab_content {
+    display: none;
+    margin-top: 40px;
+}
+
+.tab_content.active {
+    display: block;
+}
+
+.portfolio_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.portfolio_grid a {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.portfolio_grid a:hover {
+    background: #75bc43;
+    color: #fff;
+}
+
+.portfolio_grid h4 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.tag {
+    display: inline-block;
+    background: #e0e0e0;
+    padding: 4px 10px;
+    margin: 3px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.portfolio_grid a:hover .tag {
+    background: #fff;
+    color: #75bc43;
 }
 
 /* =========================
@@ -240,7 +292,7 @@ h1 {
 
 .skill_body {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 32px;
     margin-top: 60px;
 }
@@ -275,11 +327,10 @@ h1 {
 }
 
 /* =========================
-   EXPERIENCE
+EXPERIENCE
 ========================= */
 .experience {
     padding: 100px 0;
-    background-color: #F9F9F9;
 }
 
 .experience_header {
@@ -361,7 +412,7 @@ h1 {
 
 .get_in_touch_body {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 32px;
     margin-top: 60px;
 }
@@ -370,6 +421,7 @@ h1 {
     background-color: #75bc4369;
     padding: 30px;
     border-radius: 10px;
+    text-align: center;
 }
 
 .get_in_touch_box .icon_box {
@@ -380,6 +432,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .get_in_touch_box .icon_box i {
@@ -444,6 +497,24 @@ footer {
     font-size: 26px;
     text-decoration: none;
 }
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 1024px) {
+    .banner_inner, .about_me_inner {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .banner_text, .about_me .text_section {
+        width: 100%;
+    }
+
+    .about_me .image_part {
+        width: 300px;
+    }
+}
     </style>
 
     <header id="header">
@@ -455,9 +526,9 @@ footer {
                 <div class="navigation">
                     <ul>
                         <li> <a href="#about_me">About us</a></li>
-                        <li> <a href="#education">Education </a></li>
-                        <li> <a href="#experience">Experience </a></li>
-                        <li> <a href="#skill">Skill </a></li>
+                         <li> <a href="#experience">Experience </a></li>
+                       <li> <a href="#skill">Skill </a></li>
+                        <li> <a href="#portfolio">Portfolio </a></li>
                         <li class="nav_btn"> <a href="#Contact">Contact Us </a></li>
                     </ul>
                 </div>
@@ -481,8 +552,6 @@ footer {
             </div>
         </div>
     </section>
-    
-
     <section class="about_me" id="about_me">
         <div class="container">
             <div class="about_me_inner">
@@ -495,10 +564,7 @@ footer {
                     <br>
                     Whether it's a custom WordPress site, a Shopify store, or a Wix website, I bring the same level of care and attention to detail to every project. I love solving design challenges and helping businesses stand out online.</p>
                 </div>
-
                 <div id="example-anchor" style="height: 500px; background-color: #f0f0f0;"></div>
-
-
                 <div class="image_part" data-aos="fade-left"
                     data-aos-anchor="#example-anchor"
                     data-aos-offset="500"
@@ -536,41 +602,212 @@ footer {
                         <ul>
                             <li><p> HTML & CSS</p></li>
                             <li><p> JavaScript & jQuery</p></li>
+                             <li><p> Figma</p></li>
                             <li><p> Photoshop</p></li>
-                            <li><p> Figma</p></li>
+                             <li><p> Core Php</p></li>
                         </ul>
                     </div>
-
-
                     <div class="skill_box" data-aos="flip-up">
                         <h5>WordPress Builders</h5>
                         <ul>
-                            <li><p> Elementor</p></li>
-                            <li><p> Divi & Avada</p></li>
+                            <li><p> Elementor,Elementor Pro</p></li>
+                            <li><p> Divi & Avada Theme</p></li>
                             <li><p> Bricks Builder</p></li>
                             <li><p> Gutenberg & WP Bakery</p></li>
                         </ul>
                     </div>
 
 
-
                     <div class="skill_box" data-aos="fade-up-left">
                         <h5>E-Commerce & Platforms</h5>
                         <ul>
-                            <li><p> Shopify & HTML</p></li>
-                            <li><p> Wix</p></li>
-                            <li><p> Webflow</p></li>
-                            <li><p> Replo & Shogun</p></li>
+                            <li><p>Shopify</p></li>
+                           <li><p> Replo Builder & Shogun Builder</p></li>
+                           <li><p> Woocommerce</p></li>
                         </ul>
                     </div>
 
-
+              <div class="skill_box" data-aos="fade-up-left">
+                        <h5>Other Cms</h5>
+                        <ul>
+                            <li><p> Squarespace</p></li>
+                            <li><p> Duda CMS</p></li>
+                            <li><p> Wix</p></li>
+                            <li><p> Webflow</p></li>
+                            <li><p> Thinkific Learning CMS </p></li>
+                           
+                        </ul>
+                    </div>
+                      <div class="skill_box" data-aos="fade-up-right">
+                        <h5>Frontend Technology</h5>
+                        <ul>
+                            <li><p> React Js</p></li>
+                            <li><p> Next Js</p></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+<section class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="portfolio_inner">
+            <div class="portfolio_header" data-aos="fade-up">
+                <h3>My Work</h3>
+                <h2>Portfolio</h2>
+                <p>Explore my projects across different technologies and platforms.</p>
+            </div>
 
+            <!-- Tabs -->
+            <div class="portfolio_tabs">
+                <button class="tab_btn active" data-tab="shopify">Shopify</button>
+                <button class="tab_btn" data-tab="wordpress">WordPress</button>
+                <button class="tab_btn" data-tab="html">HTML/CSS</button>
+                <button class="tab_btn" data-tab="react">React Js</button>
+            </div>
+
+            <!-- ================= SHOPIFY ================= -->
+            <div class="tab_content active" id="shopify">
+                <div class="portfolio_grid">
+
+                    <a href="https://gigisupplements.com/" target="_blank">
+                        <h4>Gigi Supplements</h4>
+                        <p><span class="tag">Shopify</span><span class="tag">Replo</span></p>
+                    </a>
+
+                    <a href="https://nodetac.com" target="_blank">
+                        <h4>Node Tac</h4>
+                        <p><span class="tag">Shopify</span><span class="tag">Dawn Theme</span></p>
+                    </a>
+
+                    <a href="https://timelesswoodcare.com" target="_blank">
+                        <h4>Timeless Woodcare</h4>
+                        <p><span class="tag">Shopify</span></p>
+                    </a>
+
+                    <a href="https://haven-wellness.co/" target="_blank">
+                        <h4>Haven Wellness</h4>
+                        <p><span class="tag">Shopify</span></p>
+                    </a>
+
+                    <a href="https://www.brainritual.com/page" target="_blank">
+                        <h4>Brain Ritual</h4>
+                        <p><span class="tag">Shopify</span><span class="tag">Replo</span></p>
+                    </a>
+
+                    <a href="https://www.drinkwyse.com/" target="_blank">
+                        <h4>Drink Wyse</h4>
+                        <p><span class="tag">Shopify</span><span class="tag">Shogun</span></p>
+                    </a>
+
+                    <a href="https://cayejoaillier.com" target="_blank">
+                        <h4>Caye Joaillier</h4>
+                        <p><span class="tag">Shopify</span><span class="tag">Impulse Theme</span></p>
+                    </a>
+                    <a href="https://www.weqook.com" target="_blank">
+                        <h4>Weqhook</h4>
+                        <p><span class="tag">Shopify</span><span class="tag">Canopy Theme</span></p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ================= WORDPRESS ================= -->
+            <div class="tab_content" id="wordpress">
+                <div class="portfolio_grid">
+                    <a href="https://www.fsa-aus.com.au/" target="_blank">
+                        <h4>FSA AUS</h4>
+                        <p><span class="tag">Elementor</span></p>
+                    </a>
+                    <a href="https://forte-dentistry.com/" target="_blank">
+                        <h4>Forte Dentistry </h4>
+                        <p><span class="tag">Elementor, Contact Form 7</span></p>
+                    </a>
+                     <a href="https://firstresponderprotectiveservices.com/" target="_blank">
+                        <h4>Firstresponder Protective </h4>
+                        <p><span class="tag">Elementor, Contact Form 7</span></p>
+                    </a>
+
+                    <a href="https://a1littlejohn.com/" target="_blank">
+                        <h4>A1 Littlejohn</h4>
+                        <p><span class="tag">Elementor Pro</span></p>
+                    </a>
+
+                    <a href="https://imaginau.ca/" target="_blank">
+                        <h4>Imaginau</h4>
+                        <p><span class="tag">Elementor Pro</span><span class="tag">Hello Theme</span></p>
+                    </a>
+
+                    <a href="https://backcountrymagazine.com/" target="_blank">
+                        <h4>Backcountry Magazine</h4>
+                        <p><span class="tag">Gutenberg</span></p>
+                    </a>
+
+                    <a href="https://serigor.com/" target="_blank">
+                        <h4>Serigor</h4>
+                        <p><span class="tag">WP Bakery</span></p>
+                    </a>
+
+                    <a href="https://www.ssaprogram.com/" target="_blank">
+                        <h4>SSA Program</h4>
+                        <p><span class="tag">ACF</span><span class="tag">Custom Template</span></p>
+                    </a>
+
+                    <a href="https://exelera.org" target="_blank">
+                        <h4>Exelera</h4>
+                        <p><span class="tag">Avada Theme</span></p>
+                    </a>
+
+                    <a href="https://bonfiretraining.com/" target="_blank">
+                        <h4>Bonfire Training</h4>
+                        <p><span class="tag">Divi</span></p>
+                    </a>
+                      <a href="https://the9line.com" target="_blank">
+                        <h4>The 9line</h4>
+                        <p><span class="tag">Avada Theme, Slider Revolution6</span></p>
+                    </a>
+                    <a href="https://uptimeus.com/" target="_blank">
+                        <h4>Uptime</h4>
+                        <p><span class="tag">Beaver Builder</span></p>
+                    </a>
+                     <a href="https://lifeline-ems.com/" target="_blank">
+                        <h4>Lifeline Ems</h4>
+                        <p><span class="tag">Avada Theme, Slider Revolution6, Gravity Forms</span></p>
+                    </a>
+
+                    <a href="https://www.longevityhealth.me/" target="_blank">
+                        <h4>Longevity Health</h4>
+                        <p><span class="tag">Squarespace</span></p>
+                    </a>
+
+                </div>
+            </div>
+            <!-- ================= HTML ================= -->
+            <div class="tab_content" id="html">
+                <div class="portfolio_grid" style="width:230px;">
+
+                    <a href="https://infotras.com/" target="_blank">
+                        <h4>Infotras</h4>
+                        <p><span class="tag">HTML</span><span class="tag">CSS</span></p>
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- ================= React ================= -->
+            <div class="tab_content" id="react">
+                <div class="portfolio_grid" style="width:230px;">
+
+                    <a href="https://tamardesign.netlify.app/" target="_blank">
+                        <h4>Tamar Designs</h4>
+                        <p><span class="tag">React</span><span class="tag"> Tailwind CSS</span></p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
     <section class="experience" id="experience">
         <div class="container">
             <div class="experience_inner">
@@ -603,19 +840,13 @@ footer {
                         
                     </div>
 
-
-
-
                 </div>
 
             </div>
         </div>
     </section>
 
-
-
-
-    <section class="get_in_touch" id="Contact">
+   <section class="get_in_touch" id="Contact">
         <div class="container">
             <div class="get_in_touch_inner">
                 <div class="get_in_touch_header" data-aos="fade-right">
@@ -672,7 +903,6 @@ footer {
 
 
 <script>
-
         function animateTyping() {
             let text = document.getElementById("typing-heading");
             let textContent = text.textContent;
@@ -710,7 +940,6 @@ footer {
         // ==================
 
 
-
   // Initialize AOS
         AOS.init({
             once: false, 
@@ -736,7 +965,7 @@ footer {
         });
 
 
-          document.querySelectorAll('.navigation ul li a').forEach(anchor => {
+    document.querySelectorAll('.navigation ul li a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       e.preventDefault();
       
@@ -750,7 +979,17 @@ footer {
     });
   });
 
-    </script>
+document.querySelectorAll(".tab_btn").forEach(button => {
+    button.addEventListener("click", () => {
+
+        document.querySelectorAll(".tab_btn").forEach(btn => btn.classList.remove("active"));
+        document.querySelectorAll(".tab_content").forEach(tab => tab.classList.remove("active"));
+
+        button.classList.add("active");
+        document.getElementById(button.getAttribute("data-tab")).classList.add("active");
+    });
+});
+</script>
 
 </body>
 </html>
