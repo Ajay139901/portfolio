@@ -134,7 +134,6 @@ header {
     width: 400px;
     height: 400px;
     border-radius: 50%;
-    object-position:0% 10%;
     object-fit: cover;
     box-shadow: 0 4px 14px 0 #16161657;
 }
@@ -241,7 +240,7 @@ header {
 }
 
 .portfolio_grid a {
-    background: #E7E9E1;
+    background: #fff;
     padding: 20px;
     border-radius: 10px;
     text-decoration: none;
@@ -262,7 +261,7 @@ header {
 
 .tag {
     display: inline-block;
-    background: #fff;
+    background: #e0e0e0;
     padding: 4px 10px;
     margin: 3px;
     border-radius: 20px;
@@ -498,6 +497,38 @@ footer {
     font-size: 26px;
     text-decoration: none;
 }
+/* Base styles */
+header {
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.inner_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 
 /* =========================
    RESPONSIVE
@@ -516,6 +547,29 @@ footer {
         width: 300px;
     }
 }
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .navigation ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        background: #fff;
+        width: 100%;
+        padding: 20px;
+        transition: right 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .navigation ul.active {
+        right: 0;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+    </style>
     </style>
 
     <header id="header">
